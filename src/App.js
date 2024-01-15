@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Task1 from "./components/Task1";
+import Boxes from "./components/Boxes";
+import Card from "./components/Card";
+import Avatar from "./components/Avatar";
+import Task4 from "./components/Task4";
 
-function App() {
+const App = () => {
+  const stylesArr = [
+    {
+      width: "300px",
+      height: "150px",
+      backgroundColor: "red",
+    },
+    {
+      width: "400px",
+      height: "200px",
+      backgroundColor: "green",
+    },
+    {
+      width: "500px",
+      height: "250px",
+      backgroundColor: "black",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Task1 />
+      <br />
+      <Boxes stylesArr={stylesArr} />
+      <br />
+      <Card>
+        <Avatar
+          src="https://png.pngtree.com/thumb_back/fh260/background/20230612/pngtree-city-washed-away-by-water-at-night-image_2925207.jpg"
+          alt="Image"
+        />
+      </Card>
+      <br />
+      <Task4 />
     </div>
   );
-}
+};
 
 export default App;
